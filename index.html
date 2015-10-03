@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<title>MAKE MY NOTE</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+		<script src="controller.js"></script>
+		
+	</head>
+	<body ng-controller="listMyTask">
+	
+		<div class="cover"></div>
+		<br/><br/><br/>
+		<div class="container row body" ng-init="error=true;">
+			<center><span class="h2 heading">METROPOLITAN WEATHER</span></center><br>
+			<select class="form-control big-input" ng-model="zip" ng-change="checkWeather()">
+				<option ng-repeat="city in cities" value ="{{city.zip}}" >{{city.name}}</option>
+			</select>
+			<br/>
+			<div class="weather-results-box" ng-hide="error">
+				<span class="h3">City - {{weatherResults.location.city}}({{weatherResults.location.country}})</span>
+				<br/><br/>
+			<div class="row">
+				<div class="col-md-5 " style="border-right:3px solid black" >
+					<table>
+						<tr>
+							<td>
+								<img src="temp.jpg" height="50" width="100" >
+							</td>
+							<td>
+								<span>Sunrise - {{weatherResults.astronomy.sunrise}}</span><br/>	
+								<span>Sunset - {{weatherResults.astronomy.sunset}}</span>	
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-5">
+					<table>
+						<tr>
+							<td>
+								<img src="humid.png" height="50" width="100">
+							</td>
+							<td>
+								<span>Humidity - {{weatherResults.atmosphere.humidity}}%</span><br/>	
+								<span>Pressure - {{weatherResults.atmosphere.pressure}} {{weatherResults.metrics.pressure}}</span>	
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+				<br/>
+				<div id="current">
+				</div>				
+			</div>
+		</div>	
+		
+	</body>
+</html>

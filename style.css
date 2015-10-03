@@ -1,0 +1,51 @@
+*{
+//	border:1px solid black;
+}
+body{
+	font-size:20px;
+	font-family: 'Open Sans', sans-serif;
+	background:lightgrey;
+	background:url('back.jpg');
+	background-position: left top,right bottom;
+    background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: 100% 100%;
+}
+.cover{
+	position:fixed;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	background:black;
+	opacity:0.8;
+	z-index:-1;
+}
+
+.container {
+	width: 60%;
+	margin: auto;
+	padding: 50px 30px;
+}
+
+.body{
+	background:white;
+	padding:40px 10px;
+	border-radius:10px;
+}
+
+
+.heading{
+	color:#2185d0;
+	font-weight:bold;
+	text-shadow: outset 10px 10px 2px green;
+}
+
+.big-input{
+	font-size:25px;
+	height:50px;
+}
+.right-wall{	
+	color:red;
+	border-right:10px solid grey;
+}
